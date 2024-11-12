@@ -16,8 +16,7 @@ The scripts were written for python >=3.6. For the most part, standard python li
         
 
 # Installation
-Perhaps the best way to use the scripts here is to simply download, extract, keep them in the same folder and add that to the system's PATH variable. 'export PATH="/path/to/these/scripts":$PATH'
-They can be copied to e.g. /usr/local/bin but that might be messy.
+Perhaps the best way to use the scripts here is to simply download, extract, keep them in the same folder and add that to the system's PATH variable. 'export PATH="/path/to/these/scripts":$PATH'. Alternatively, they may be copied to e.g. /usr/local/bin but that might be messy.
 
 
 # Usage
