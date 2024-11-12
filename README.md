@@ -1,10 +1,10 @@
 # npumi
 Derive amplicon sequence variants from nanopore amplicon sequencing done in a specific way
 
-Preamble
+# Preamble
 The scripts here are to document the derivation of Amplicon Sequence Variants (ASVs) from Nanopore amplicon data. They are very specific to manner in which the amplicon libraries were prepared and are not intended to constitute a general pipeline to derive ASVs from Nanopore amplicon data.
 
-Requirements
+# Requirements
 Hardware: These scripts can benefit from a machine with a CPU core count if the work is split up appropriately (see below).
           For the most part, a modern workstation should have sufficient memory if not too many jobs are processed in parallel.
           One of the scripts can run a lot faster in a high memory machine, but it has a slower, lower-memory mode, if necessary.
@@ -19,12 +19,12 @@ Dependencies: The scripts were written for python >=3.6
               One of the scripts uses subprocess to call 'minimap2' and 'racon', both of which need to be installed appropriately.
         
 
-Installation
+# Installation
 Perhaps the best way to use the scripts here is to simply download, extract, keep them in the same folder and add that to the system's PATH variable. 'export PATH="/path/to/these/scripts":$PATH'
 They can be copied to e.g. /usr/local/bin but that might be messy.
 
 
-Usage
+# Usage
 The scripts are run in the order in which they are named, with the output of the first script being the input for the second and so on. For IO reasons, especially if working with HDDs, it is probably beneficial to gzip compress any input fastq files for these scripts.
 
 To take advantage of a server with a large number of CPU cores, it is probably best to split the data into smaller chunks to be processed in parallel. e.g.:
