@@ -29,16 +29,22 @@ The scripts are run in the order in which they are named, with the output of the
 
 To take advantage of a server with a large number of CPU cores, it is probably best to split the data into smaller chunks to be processed in parallel. e.g.:
 > zcat reads.fq.gz | split -l 4000000 -a 2 -d - split_
+
 > for file in split_*; do mv $file ${file}".fq"; done
+
 > pigz split*.fq # pigz is parallel implementation of gnuzip
 
 The following is an overview of how it would look if the data was processed in a single thread.
 Assume raw reads relative to the current directory are in '00_raw/reads.fq.gz'.
 The following assumes that the barcodes have not been renamed in the 'primers.py' file.
 > mkdir 01_framed 02_annotated 03_demux
+
 > 01_frame_amplicons.py -i 00_raw/reads.fq.gz -l GTCTCGTGGGCTCGG -u 15 -b 24 -m 300 -M 1800 > 01_framed/reads.fq && gzip 01_framed/reads.fq
+
 > 02_annotate_amplicons.py -i 01_framed/reads.fq.gz -o 02_annotated/reads.fq && gzip 02_annotated/reads.fq
+
 > cd 02_annotated && 03_npumi_demux.py -e fq.gz && gzip BC*.fastq && mv BC*.fastq.gz ../03_demux
+
 > cd ../03_demux && for file in BC*.fastq.gz; do 04_align_umid_clusters.py -i $file -o $(echo $file | sed s'/\.fastq\.gz/\.fasta/'); done
 The derived ASV sequences are now in the resulting fasta files.
 Consider deleting intermediate files.
