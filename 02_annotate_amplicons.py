@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 '''
 This needs to be run on the output of `01_extract_amplicons.py`
