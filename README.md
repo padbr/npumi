@@ -6,9 +6,9 @@ The scripts here are to document the derivation of Amplicon Sequence Variants (A
 
 # Requirements
 Hardware: These scripts can benefit from a machine with a high CPU core count if the work is split up appropriately (see below).
-          For the most part, a modern workstation should have sufficient memory if not too many jobs are processed in parallel.
-          One of the scripts can run a lot faster in a high memory machine, but it has a slower, lower-memory mode, if necessary.
-          Memory usage and processing time will depend on the total amount of data and how much maximum data there is for any individual barcode. So very high volume datasets will have higher hardware requirements than a more modest dataset.
+        - For the most part, a modern workstation should have sufficient memory if not too many jobs are processed in parallel.
+        - One of the scripts can run a lot faster in a high memory machine, but it has a slower, lower-memory mode, if necessary.
+        - Memory usage and processing time will depend on the total amount of data and how much maximum data there is for any individual barcode. So very high volume datasets will have higher hardware requirements than a more modest dataset.
 
 Operating system: The scripts here have only been tested in ubuntu. Likely almost any current version of linux should suffice.
                   The scripts here have not been tested in Apple nor Windows operating systems. The use of the subprocess module makes me think that these will not work outside of linux, though I am less certain of this regarding Apple machines.
