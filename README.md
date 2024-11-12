@@ -2,7 +2,7 @@
 Derive amplicon sequence variants from nanopore amplicon sequencing done in a specific way
 
 # Preamble
-The scripts here are to document the derivation of Amplicon Sequence Variants (ASVs) from Nanopore amplicon data. They are very specific to manner in which the amplicon libraries were prepared and are not intended to constitute a general pipeline to derive ASVs from Nanopore amplicon data.
+The scripts here are to document the derivation of Amplicon Sequence Variants (ASVs) from Nanopore amplicon data. The purpose of this repository is so that I can document how I have processed data in some peer reviewed publications. They are very specific to manner in which the amplicon libraries were prepared and are not intended to constitute a general pipeline to derive ASVs from Nanopore amplicon data.
 
 # Requirements
 Hardware: These scripts can benefit from a machine with a CPU core count if the work is split up appropriately (see below).
