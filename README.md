@@ -5,7 +5,7 @@ Derive amplicon sequence variants from nanopore amplicon sequencing done in a sp
 The scripts here are to document the derivation of Amplicon Sequence Variants (ASVs) from Nanopore amplicon data. The purpose of this repository is so that I can document how I have processed data in some peer reviewed publications. They are very specific to manner in which the amplicon libraries were prepared and are not intended to constitute a general pipeline to derive ASVs from Nanopore amplicon data.
 
 # Requirements
-Hardware: These scripts can benefit from a machine with a CPU core count if the work is split up appropriately (see below).
+Hardware: These scripts can benefit from a machine with a high CPU core count if the work is split up appropriately (see below).
           For the most part, a modern workstation should have sufficient memory if not too many jobs are processed in parallel.
           One of the scripts can run a lot faster in a high memory machine, but it has a slower, lower-memory mode, if necessary.
           Memory usage and processing time will depend on the total amount of data and how much maximum data there is for any individual barcode. So very high volume datasets will have higher hardware requirements than a more modest dataset.
@@ -15,7 +15,7 @@ Operating system: The scripts here have only been tested in ubuntu. Likely almos
 
 Dependencies: The scripts were written for python >=3.6
               For the most part, standard python libraries are used, the versions of which should not be critical.
-              Biopython is the only non-standard python library required. ('pip install --user biopython' if your distribution doesn't ship a biopython package)
+              Biopython is the only non-standard python library required. ('pip install --user biopython' if your distribution doesn't ship a biopython package).
               One of the scripts uses subprocess to call 'minimap2' and 'racon', both of which need to be installed appropriately.
         
 
