@@ -18,6 +18,7 @@ The scripts were written for python >=3.6. For the most part, standard python li
 # Installation
 Perhaps the best way to use the scripts here is to simply download, extract, keep them in the same folder and add that to the system's PATH variable.
 > export PATH="/path/to/these/scripts":$PATH
+
 Alternatively, they may be copied to e.g. /usr/local/bin but that might be messy.
 
 
@@ -37,6 +38,7 @@ The following assumes that the barcodes have not been renamed in the 'primers.py
 > cd 02_annotated && 03_npumi_demux.py -e fq.gz && gzip BC*.fastq && mv BC*.fastq.gz ../03_demux
 
 > cd ../03_demux && for file in BC*.fastq.gz; do 04_align_umid_clusters.py -i $file -o $(echo $file | sed s'/\.fastq\.gz/\.fasta/'); done
+
 The derived ASV sequences are now in the resulting fasta files.
 Consider deleting intermediate files.
 
