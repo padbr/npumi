@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 linker = 'GTCTCGTGGGCTCGG' # The PCR2 "priming-site"
 umi = 'NNNNNNNNNNNNNNN'
