@@ -1,5 +1,5 @@
 # npumi
-Derive amplicon sequence variants from nanopore amplicon sequencing done in a specific way
+Derive amplicon sequence variants from nanopore amplicon sequencing done in a specific way.
 
 # Preamble
 The scripts here are to document the derivation of Amplicon Sequence Variants (ASVs) from Nanopore amplicon data. The purpose of this repository is so that I can document how I have processed data in some peer reviewed publications. They are very specific to manner in which the amplicon libraries were prepared and are not intended to constitute a general pipeline to derive ASVs from Nanopore amplicon data.
@@ -47,6 +47,6 @@ Consider deleting intermediate files.
 To take advantage of a server with a large number of CPU cores, it is probably best to split the data into smaller chunks to be processed in parallel. e.g.:
 > zcat reads.fq.gz | split -l 4000000 -a 2 -d - split_
 
-> for file in split_*; do mv $file ${file}".fq"; done
+> for file in split_*; do mv ${file} ${file}".fq"; done
 
-> pigz split*.fq # pigz is parallel implementation of gnuzip
+> pigz split*.fq # pigz is parallel implementation of gnuzip. Use gzip if pigz is not available.
